@@ -26,7 +26,6 @@ export default function Footer() {
               <a key={href} href={href} target="_blank" rel="noopener noreferrer" className="text-pink-200/20 hover:text-accent-pink transition-colors"><Icon size={18} /></a>
             ))}
           </div>
-          <p className="text-xs text-pink-200/20 font-mono">© {new Date().getFullYear()} — {t.copy}</p>
         </div>
       </div>
     </footer>
