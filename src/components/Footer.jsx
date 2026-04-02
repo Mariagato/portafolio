@@ -19,9 +19,9 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-4">
             {[
-              { icon: FiGithub, href: 'https://github.com/mafehurtado' },
-              { icon: FiLinkedin, href: 'https://linkedin.com/in/mariafernandahurtado' },
-              { icon: FiMail, href: 'mailto:mafe.hurtado@example.com' },
+              { icon: FiGithub, href: 'https://github.com/Mariagato' },
+              { icon: FiLinkedin, href: 'https://www.linkedin.com/in/mariafernandahurtadogomez/' },
+              { icon: FiMail, href: 'mailto:marishg32@gmail.com' },
             ].map(({ icon: Icon, href }) => (
               <a key={href} href={href} target="_blank" rel="noopener noreferrer" className="text-pink-200/20 hover:text-accent-pink transition-colors"><Icon size={18} /></a>
             ))}

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import profilePhoto from '../assets/profile-photo.jpeg'
 import { FiGithub, FiLinkedin, FiMail, FiArrowDown, FiTerminal, FiStar } from 'react-icons/fi'
-import { SiPython, SiDocker, SiSelenium, SiUipath, SiTensorflow, SiPytorch, SiPandas, SiScikitlearn, SiJupyter, SiOpenai } from 'react-icons/si'
+import { SiPython, SiDocker, SiSelenium, SiTensorflow, SiPytorch, SiPandas, SiScikitlearn } from 'react-icons/si'
 import { FaAws, FaMicrosoft } from 'react-icons/fa6'
 import { useLanguage } from '../context/LanguageContext'
 import translations from '../i18n/translations'
@@ -11,7 +11,6 @@ const devopsStack = [
   { icon: FaAws, color: '#FF9900', glow: 'rgba(255, 153, 0, 0.4)', name: 'AWS' },
   { icon: FaMicrosoft, color: '#0078D4', glow: 'rgba(0, 120, 212, 0.4)', name: 'Azure' },
   { icon: SiSelenium, color: '#43B02A', glow: 'rgba(67, 176, 42, 0.4)', name: 'Selenium' },
-  { icon: SiUipath, color: '#FA4616', glow: 'rgba(250, 70, 22, 0.4)', name: 'UiPath' },
 ]
 
 const aiStack = [
@@ -20,7 +19,6 @@ const aiStack = [
   { icon: SiPytorch, color: '#EE4C2C', glow: 'rgba(238, 76, 44, 0.4)', name: 'PyTorch' },
   { icon: SiPandas, color: '#150458', glow: 'rgba(21, 4, 88, 0.4)', name: 'Pandas' },
   { icon: SiScikitlearn, color: '#F7931E', glow: 'rgba(247, 147, 30, 0.4)', name: 'Scikit' },
-  { icon: SiOpenai, color: '#ffffff', glow: 'rgba(255, 255, 255, 0.3)', name: 'LLMs' },
 ]
 
 const TechIcon = ({ icon: Icon, color, glow, name }) => (
@@ -107,9 +105,9 @@ export default function Hero() {
 
           <div className="flex items-center gap-3 sm:gap-4 justify-center lg:justify-start">
             {[
-              { icon: FiGithub, href: 'https://github.com/mafehurtado', label: 'GitHub' },
-              { icon: FiLinkedin, href: 'https://linkedin.com/in/mariafernandahurtado', label: 'LinkedIn' },
-              { icon: FiMail, href: 'mailto:mafe.hurtado@example.com', label: 'Email' },
+              { icon: FiGithub, href: 'https://github.com/Mariagato', label: 'GitHub' },
+              { icon: FiLinkedin, href: 'https://www.linkedin.com/in/mariafernandahurtadogomez/', label: 'LinkedIn' },
+              { icon: FiMail, href: 'mailto:marishg32@gmail.com', label: 'Email' },
             ].map(({ icon: Icon, href, label }) => (
               <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-lg glass text-pink-200/40 hover:text-accent-pink hover:scale-110 transition-all duration-200" aria-label={label}>
                 <Icon size={18} />

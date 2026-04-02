@@ -5,11 +5,9 @@ import { useLanguage } from '../context/LanguageContext'
 import translations from '../i18n/translations'
 
 const projectsMeta = [
-  { tech: ['Python', 'XGBoost', 'Scikit-learn', 'GeoPandas', 'QGIS'], icon: FiCpu, color: 'accent-purple', github: 'https://github.com/mafehurtado/species-predictor' },
-  { tech: ['Power BI', 'SQL', 'Python', 'PostgreSQL', 'DAX'], icon: FiBarChart2, color: 'accent-pink', github: 'https://github.com/mafehurtado/biodiversity-dashboard' },
-  { tech: ['Docker', 'GitHub Actions', 'Terraform', 'AWS', 'Bash'], icon: FiCloud, color: 'accent-green', github: 'https://github.com/mafehurtado/cicd-automation' },
-  { tech: ['Python', 'Scikit-learn', 'Pandas', 'Matplotlib', 'Jupyter'], icon: FiActivity, color: 'accent-blue', github: 'https://github.com/mafehurtado/churn-prediction' },
-  { tech: ['Grafana', 'Prometheus', 'Docker', 'Python', 'AlertManager'], icon: FiLayers, color: 'accent-cyan', github: 'https://github.com/mafehurtado/monitoring-stack' },
+  { tech: ['Python', 'Scikit-learn', 'OpenCV', 'ML', 'Segmentation'], icon: FiCpu, color: 'accent-purple', github: 'https://github.com/Mariagato' },
+  { tech: ['Python', 'Deep Learning', 'Computer Vision', 'MediaPipe'], icon: FiActivity, color: 'accent-green', github: 'https://github.com/Mariagato', demo: 'https://huggingface.co/spaces/mariahurtadogomez/SIGNAL-LANG' },
+  { tech: ['Python', 'TensorFlow', 'Object Detection', 'CNN'], icon: FiLayers, color: 'accent-pink', github: 'https://github.com/Mariagato', demo: 'https://importprogrammer-ods-classifier.streamlit.app/' },
 ]
 
 const colorMap = {
@@ -42,7 +40,10 @@ export default function Projects() {
               <motion.div key={i} initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }} className="glass rounded-2xl p-6 hover:glow-pink transition-all duration-300 group flex flex-col">
                 <div className="flex items-start justify-between mb-4">
                   <div className="p-3 rounded-xl" style={{ backgroundColor: colors.bg }}><meta.icon size={24} style={{ color: colors.text }} /></div>
-                  <a href={meta.github} target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg text-pink-200/30 hover:text-accent-pink hover:bg-white/5 transition-all" aria-label="View source"><FiGithub size={20} /></a>
+                  <div className="flex gap-1">
+                    {meta.demo && <a href={meta.demo} target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg text-pink-200/30 hover:text-accent-pink hover:bg-white/5 transition-all" aria-label="View demo"><FiExternalLink size={20} /></a>}
+                    <a href={meta.github} target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg text-pink-200/30 hover:text-accent-pink hover:bg-white/5 transition-all" aria-label="View source"><FiGithub size={20} /></a>
+                  </div>
                 </div>
                 <h3 className="text-lg font-bold text-pink-50 mb-2 group-hover:text-accent-pink transition-colors">{item.title}</h3>
                 <p className="text-sm text-pink-100/40 leading-relaxed mb-4 flex-grow">{item.description}</p>

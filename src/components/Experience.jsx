@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { FiServer, FiGlobe, FiBookOpen } from 'react-icons/fi'
+import { FiServer, FiGlobe, FiBookOpen, FiCode } from 'react-icons/fi'
 import { useLanguage } from '../context/LanguageContext'
 import translations from '../i18n/translations'
 
 const meta = [
   { icon: FiServer, color: '#c084fc' },
+  { icon: FiCode, color: '#67e8f9' },
   { icon: FiGlobe, color: '#6ee7b7' },
   { icon: FiBookOpen, color: '#f9a8d4' },
 ]

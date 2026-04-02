@@ -37,7 +37,7 @@ export default function About() {
             {t.p3pre} <span className="text-accent-purple font-semibold">{t.p3h1}</span> {t.p3mid}{' '}
             <span className="text-accent-green font-semibold">{t.p3h2}</span>{t.p3post}
           </p>
-          <p className="text-pink-200/30 italic text-base sm:text-lg">{t.p4}</p>
+          {t.p4 && <p className="text-pink-200/30 italic text-base sm:text-lg">{t.p4}</p>}
         </motion.div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">

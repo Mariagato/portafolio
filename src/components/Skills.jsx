@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import {
-  SiPython, SiDocker, SiKubernetes, SiGithubactions,
-  SiTerraform, SiPostgresql, SiJupyter, SiScikitlearn,
-  SiPandas, SiNumpy, SiGit, SiLinux, SiJenkins, SiGrafana,
-  SiApacheairflow
+  SiPython, SiDocker, SiGithubactions,
+  SiPostgresql, SiJupyter, SiScikitlearn,
+  SiPandas, SiNumpy, SiGit, SiLinux, SiSelenium,
+  SiFastapi, SiPhp, SiJavascript, SiTensorflow, SiPytorch, SiOpencv
 } from 'react-icons/si'
 import { FiCloud, FiServer, FiDatabase, FiCpu, FiBarChart2 } from 'react-icons/fi'
+import { FaAws, FaMicrosoft } from 'react-icons/fa6'
 import { useLanguage } from '../context/LanguageContext'
 import translations from '../i18n/translations'
 
@@ -15,30 +16,29 @@ const categories = [
     icon: FiServer,
     color: 'accent-purple',
     skills: [
-      { name: 'Docker', icon: SiDocker }, { name: 'Kubernetes', icon: SiKubernetes },
-      { name: 'AWS', icon: FiCloud }, { name: 'Azure', icon: FiCloud },
-      { name: 'Terraform', icon: SiTerraform }, { name: 'GitHub Actions', icon: SiGithubactions },
-      { name: 'Jenkins', icon: SiJenkins }, { name: 'Linux', icon: SiLinux },
-      { name: 'Grafana', icon: SiGrafana }, { name: 'Airflow', icon: SiApacheairflow },
+      { name: 'Docker', icon: SiDocker }, { name: 'AWS', icon: FaAws },
+      { name: 'Azure', icon: FaMicrosoft }, { name: 'GitHub Actions', icon: SiGithubactions },
+      { name: 'Linux', icon: SiLinux }, { name: 'Selenium', icon: SiSelenium },
+      { name: 'Autoscaling', icon: FiCloud },
     ],
   },
   {
     icon: FiDatabase,
     color: 'accent-pink',
     skills: [
-      { name: 'Python', icon: SiPython }, { name: 'SQL / PostgreSQL', icon: SiPostgresql },
-      { name: 'Power BI', icon: FiBarChart2 }, { name: 'Pandas', icon: SiPandas },
-      { name: 'NumPy', icon: SiNumpy }, { name: 'Jupyter', icon: SiJupyter },
-      { name: 'Git', icon: SiGit },
+      { name: 'Python', icon: SiPython }, { name: 'FastAPI', icon: SiFastapi },
+      { name: 'JavaScript', icon: SiJavascript }, { name: 'PHP', icon: SiPhp },
+      { name: 'SQL / PostgreSQL', icon: SiPostgresql }, { name: 'Git', icon: SiGit },
+      { name: 'Pandas', icon: SiPandas },
     ],
   },
   {
     icon: FiCpu,
     color: 'accent-green',
     skills: [
-      { name: 'Scikit-learn', icon: SiScikitlearn }, { name: 'XGBoost', icon: SiPython },
-      { name: 'Data Preprocessing', icon: SiPandas }, { name: 'Feature Engineering', icon: SiNumpy },
-      { name: 'Model Evaluation', icon: SiJupyter }, { name: 'NLP Basics', icon: SiPython },
+      { name: 'Scikit-learn', icon: SiScikitlearn }, { name: 'TensorFlow', icon: SiTensorflow },
+      { name: 'PyTorch', icon: SiPytorch }, { name: 'OpenCV', icon: SiOpencv },
+      { name: 'NumPy', icon: SiNumpy }, { name: 'Jupyter', icon: SiJupyter },
     ],
   },
 ]
